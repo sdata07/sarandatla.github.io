@@ -2,33 +2,95 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 
 
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  image: Avatar.jpeg
+  image_circular: true # crops the image to make it circular
+  more_info: 
+    <p>Hail Alma Matter</p>
+    
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<!-- Animated Hello World (Loki-style) -->
+<div id="animated-hello" style="margin-bottom: 1em;"></div>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fonts = [
+      "Georgia", "Courier New", "Arial", "Times New Roman", "Comic Sans MS",
+      "Impact", "Lucida Console", "Palatino Linotype", "Trebuchet MS", "Verdana"
+    ];
+    const finalFont = "Georgia";
+    const text = "Hello World!";
+    const container = document.getElementById("animated-hello");
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+    // Create spans for each letter (only once)
+    container.innerHTML = "";
+    text.split('').forEach(char => {
+      const span = document.createElement("span");
+      span.classList.add("letter");
+      span.textContent = char;
+      container.appendChild(span);
+    });
+
+    const spans = container.querySelectorAll(".letter");
+
+    function animateLetters() {
+      spans.forEach((span) => {
+        let count = 0;
+        const maxCycles = 15 + Math.floor(Math.random() * 10); // more cycles = slower
+        const interval = setInterval(() => {
+          const font = fonts[Math.floor(Math.random() * fonts.length)];
+          span.style.fontFamily = font;
+          count++;
+          if (count >= maxCycles) {
+            clearInterval(interval);
+            span.style.fontFamily = finalFont;
+          }
+        }, 1000); // <-- slower switch speed (was 100ms)
+      });
+    }
+
+    animateLetters();
+    setInterval(animateLetters, 5000); // <-- slower repeat (was 3000ms)
+  });
+</script>
+
+
+<style>
+  #animated-hello {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia, serif;
+  }
+  #animated-hello .letter {
+    display: inline-block;
+    transition: font-family 0.1s ease;
+  }
+  .profile .img {
+
+  }
+</style>
+
+My name is Saran Datla and I am a sophomore studying CS + Physics at UIUC. 
+
+I ❤️ CS, Physics, and learning about the environment.
+
+I'm also a wannabe Quantum Engineer who also loves learning about AI. Find out more in my Projects Page!
