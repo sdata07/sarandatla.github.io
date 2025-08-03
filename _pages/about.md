@@ -2,15 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
+subtitle:
 
 profile:
   align: right
   image: Avatar.jpeg
   image_circular: true # crops the image to make it circular
-  more_info: 
-    <p>Hail Alma Matter</p>
-    
+  more_info: <p>Hail Alma Matter</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -71,7 +69,6 @@ latest_posts:
   });
 </script>
 
-
 <style>
   #animated-hello {
     color: white;
@@ -89,7 +86,7 @@ latest_posts:
   }
 </style>
 
-My name is Saran Datla and I am a sophomore studying CS + Physics at UIUC. 
+My name is Saran Datla and I am a sophomore studying CS + Physics at UIUC.
 
 I ❤️ CS, Physics, and learning about the environment.
 
