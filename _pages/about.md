@@ -7,8 +7,8 @@ subtitle:
 profile:
   align: right
   image: Avatar.jpeg
-  image_circular: true # crops the image to make it circular
-  more_info: <p>Hail Alma Matter</p>
+  image_circular: false # crops the image to make it circular
+  more_info: false 
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -76,18 +76,27 @@ latest_posts:
     font-weight: bold;
     text-align: center;
     font-family: Georgia, serif;
+    letter-spacing: 0.05em;
   }
   #animated-hello .letter {
-    display: inline-block;
-    transition: font-family 0.1s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1em;
+    height: 3rem;
+    transition: font-family 0.3s ease;
   }
   .profile .img {
 
   }
 </style>
 
-My name is Saran Datla and I am a sophomore studying CS + Physics at UIUC.
+<div style = "font-size: 22px" >
 
-I ❤️ CS, Physics, and learning about the environment.
+<p>My name is Saran Datla and I am a sophomore studying CS + Physics at UIUC.</p>
 
-I'm also a wannabe Quantum Engineer who also loves learning about AI. Find out more in my Projects Page!
+<p>I ❤️ coding, physics, and everything in between.</p>
+
+<p>I'm also a wannabe Quantum Engineer who also loves learning about AI. Find out more in my Projects Page!</p>
+
+</div>
