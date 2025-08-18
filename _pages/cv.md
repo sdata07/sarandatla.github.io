@@ -9,5 +9,3 @@ description:
 toc:
   sidebar: left
 ---
-
-![CV](assets/img/3.jpg){: style="width: 100%; height: auto; display: block; margin: 0 auto;" }
