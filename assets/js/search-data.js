@@ -407,6 +407,11 @@ ninja.data = [{
           description: "A project that visualizes the IPL toss and match prediction winner over time.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-forest-area-prediction-using-gdp",
+          title: 'Forest Area Prediction using GDP',
+          description: "Using GDP per Capita to Predict Future Forest Cover",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
             },},{
         id: 'social-github',
         title: 'GitHub',
