@@ -58,23 +58,45 @@ Used another kaggle dataset to find the percentage changes in forest cover and a
 </div>
 As you can see there is a consitent and minor increase in forest area compared to 1992 (which I have kept as 0). After that there is a clear downward trend in increase and even a decrease from 2010 onwards. Thus indicating a large change during this time and this is the period I wanted to investigate.
 
+<h3>Combining both datasets: </h3>
+I then combined both datasets to find any correlation between the two. I found a strong relationship after 2010, which I selected out
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
 <div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Project 2/1992 Combined.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
+<div class="caption">
+    Combined data since 1992
+</div>
 
-{% endraw %}
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Project 2/2010 Combined.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Combined data since 2010
+</div>
+
+
+<h3>Making predicitons: </h3>
+Finally, to make the model capable of predicting future values I split the data after 2010 into training and testing (split on the year 2018).
+<br>
+From this I implemented a gradient boosting model on the training data. I then predicted the test values' "Forest Cover Change" and compared the results as shown in the graph.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/Project 2/Predictions.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<h3>Conclusion: </h3>
+As you can see there is a clear correlation between forest cover and GDP, showing how crucial resource aquistion is in developing an economy. Furthermore, I hope that from this data policymakers will be more inclined to protect natural habitats as there is not only an altruistic incentive, but an economic one as well.
+
+Here is a link to the github repo:
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0 text-center">
+        <a href = "https://github.com/sdata07/Forest-Area-Predictor" target="_blank">{% include figure.liquid path="assets/img/Project 1/github-mark-white.png" title="git-hub" class="img-fluid rounded z-depth-1" width="80px" %} </a>
+    </div>
+</div>
